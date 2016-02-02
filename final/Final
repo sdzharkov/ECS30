@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+typedef struct board_struct{
+	int row;
+	int col;
+	int num_mines;
+	tiles** tile;
+} board;
+
+typedef struct tiles_struct{
+	int visibility;
+	int is_mine;
+	int surrounding;
+} tiles;
+
+void print_board(board** board(){
+}
+
+void read_args(int argc, char** argv){
+
+}
+
+int main(int argc, char** argv){
+	board* boardptr = NULL;
+	boardptr = (board*)malloc(row*sizeof(cord));
+	boardptr -> row = argv[1];
+	boardptr -> col = argv[2];
+	boardptr -> num_mines = argv[3];
+	
+	printf("%d %d %d\n",board.row,board.col,board.num_mines);
+	
+	
+
+
+	return 0;
+}

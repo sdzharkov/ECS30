@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <string.h>
+
+void readinMatrix(int row,int col,int matrix[row][col]);
+void addMatrix(int row, int col, int matrixA[row][col],int matrixB[row][col]);
+int main(){
+
+	int row = 0;
+	int col = 0;
+	int maxsize = 100;
+	int matrixA[maxsize][maxsize];
+	int matrixB[maxsize][maxsize];
+
+
+	printf("Please enter the number of rows: ");
+	scanf("%d",&row);
+	printf("Please enter the number of columns: ");
+	scanf("%d",&col);
+	
+	printf("Enter Matrix A \n");
+	readinMatrix(row,col,matrixA);
+	printf("Enter Matrix B \n");
+	readinMatrix(row,col,matrixB);
+	
+	printf("A + B = \n");
+	addMatrix(row,col,matrixA,matrixB);
+	
+
+	return 0;
+	
+}
+
+void readinMatrix(int row,int col,int matrix[row][col]){
+	int i = 0;
+	int j = 0;
+
+	for (i=0;i<row;++i){
+		for(j=0;j<col;++j){
+			scanf("%d",&matrix[i][j]);
+		}
+	}
+
+	return;
+}	
+void addMatrix(int row, int col, int matrixA[row][col],int matrixB[row][col]){
+	int matrixC[row][col];
+	int i,j;
+	
+	for (i=0;i<row;++i){
+		for (j=0;j<col;++j){
+			matrixC[i][j] = matrixA[i][j] + matrixB[i][j];
+		}
+	}
+	for (i= 0;i<row; ++i){
+		for (j=0;j<col; ++j){
+			printf("%d ",matrixC[i][j]);
+		}
+		printf("\n");
+	}
+	return;
+}
+
+
+

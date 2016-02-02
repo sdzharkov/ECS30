@@ -1,0 +1,22 @@
+/*
+void perm4(int values[],int len, int perm[][4]){
+	
+
+	return;
+}
+*/
+int main(){
+	int values [] = 0;
+	int i = 0;
+	int value = 0;
+	printf("Please enter four numbers:\n");
+	for (i = 0;i<4;++i){
+		scanf("%d",&value);
+		values[i] = value;
+		}
+		
+		printf("%d",values);
+	
+	return 0;
+	
+}
